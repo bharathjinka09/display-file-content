@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>Read Text File</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head> 
+
+<body> 
+	<h1 style="text-align: center;">Upload Text, CSV, HTML file and get file content</h1>
+	<input type="file" name="inputfile"
+			id="inputfile"> 
+	<br> 
+
+	<pre id="output"></pre> 
+	
+	<script type="text/javascript"> 
+		document.getElementById('inputfile') 
+			.addEventListener('change', function() { 
+			
+			var fr=new FileReader(); 
+			fr.onload=function(){ 
+				localStorage.setItem('data',fr.result);
+				document.getElementById('output') 
+						.textContent=localStorage.getItem('data'); 
+			} 
+
+			fr.readAsText(this.files[0]); 
+		}) 
+			document.getElementById('output') 
+						.textContent=localStorage.getItem('data'); 
+			console.log(localStorage.getItem('data'));
+			
+	</script> 
+</body> 
+
+</html> 
