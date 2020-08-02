@@ -4,15 +4,24 @@
 <head> 
 	<title>Read Text File</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css">
+		body{
+			background-color: aliceblue;
+		}
+	</style>
 </head> 
 
 <body> 
-	<h1 style="text-align: center;">Upload Text, CSV, HTML file and get file content</h1>
-	<input type="file" name="inputfile"
-			id="inputfile"> 
-	<br> 
+	<div class="container">
+		<h1 style="text-align: center;">Upload Text, CSV, HTML file and get file content</h1>
+		<input type="file" name="inputfile"
+				id="inputfile"> 
+		<br> 
+		<br> 
 
-	<pre id="output"></pre> 
+		<pre id="output"></pre> 
+	</div>
 	
 	<script type="text/javascript"> 
 		document.getElementById('inputfile') 
